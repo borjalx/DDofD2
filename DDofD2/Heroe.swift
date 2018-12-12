@@ -47,7 +47,7 @@ class Heroe {
         ataqueReal += equipacion?.armadura?.ataque ?? 0
         ataqueReal += equipacion?.botas?.ataque ?? 0
         ataqueReal += equipacion?.casco?.ataque ?? 0
-        ataqueReal += equipacion?.guantes?.ataque ?? 0
+        ataqueReal += equipacion?.escudo?.ataque ?? 0
         return ataqueReal
     }
     
@@ -57,7 +57,7 @@ class Heroe {
         defensaReal += equipacion?.armadura?.defensa ?? 0
         defensaReal += equipacion?.botas?.defensa ?? 0
         defensaReal += equipacion?.casco?.defensa ?? 0
-        defensaReal += equipacion?.guantes?.defensa ?? 0
+        defensaReal += equipacion?.escudo?.defensa ?? 0
         return defensaReal
     }
     
@@ -67,7 +67,7 @@ class Heroe {
         magiaReal += equipacion?.armadura?.magia ?? 0
         magiaReal += equipacion?.botas?.magia ?? 0
         magiaReal += equipacion?.casco?.magia ?? 0
-        magiaReal += equipacion?.guantes?.magia ?? 0
+        magiaReal += equipacion?.escudo?.magia ?? 0
         return magiaReal
     }
     
@@ -77,7 +77,7 @@ class Heroe {
         suerteReal += equipacion?.armadura?.suerte ?? 0
         suerteReal += equipacion?.botas?.suerte ?? 0
         suerteReal += equipacion?.casco?.suerte ?? 0
-        suerteReal += equipacion?.guantes?.suerte ?? 0
+        suerteReal += equipacion?.escudo?.suerte ?? 0
         return suerteReal
     }
     

@@ -37,8 +37,8 @@ class Inventario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let vista: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        let imagen: UIImageView = UIImageView(frame: CGRect(x: -150, y: 0, width: 100, height: 150))
-        let texto: UILabel = UILabel(frame: CGRect(x: 20, y: 0, width: 150, height: 100))
+        let imagen: UIImageView = UIImageView(frame: CGRect(x: -70, y: 0, width: 100, height: 150))
+        let texto: UILabel = UILabel(frame: CGRect(x: 70, y: 0, width: 150, height: 100))
         
         imagen.image = heroina.inventario[row].imagen!
         texto.text = heroina.inventario[row].nombre
@@ -51,6 +51,44 @@ class Inventario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 170
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //Heroina auxiliar con los mismos datos que la heroina actual
+        var hAux:Heroe = heroina
+        //Susitituimos el item actual por el de la equipación
+        switch(heroina.inventario[row].tipo){
+            case "arma":
+                hAux.equipacion?.arma = heroina.inventario[row]
+                break;
+            case "armadura":
+                hAux.equipacion?.armadura = heroina.inventario[row]
+                break;
+            case "casco":
+                hAux.equipacion?.casco = heroina.inventario[row]
+                break;
+            case "escudo":
+                hAux.equipacion?.escudo = heroina.inventario[row]
+                break;
+            case "botas":
+                hAux.equipacion?.botas = heroina.inventario[row]
+                break;
+            default:
+                break;
+            
+            
+        }
+        //Mostramos en los labels los valores de la heroina auxiliar
+        
+        ahAtaque.text = String(hAux.ataque)
+        ahAtaque.textColor = getColor(numeroActual: heroina.ataque, numeroNuevo: hAux.ataque)
+        ahDefensa.text = String(hAux.defensa)
+        ahDefensa.textColor = getColor(numeroActual: heroina.defensa, numeroNuevo: hAux.defensa)
+        ahMagia.text = String(hAux.magia)
+        ahMagia.textColor = getColor(numeroActual: heroina.magia, numeroNuevo: hAux.magia)
+        ahSuerte.text = String(hAux.suerte)
+        ahSuerte.textColor = getColor(numeroActual: heroina.suerte, numeroNuevo: hAux.suerte)
+        
     }
 
     //Funciones
