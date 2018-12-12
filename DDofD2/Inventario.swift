@@ -37,14 +37,32 @@ class Inventario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let vista: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        let imagen: UIImageView = UIImageView(frame: CGRect(x: -70, y: 0, width: 100, height: 150))
-        let texto: UILabel = UILabel(frame: CGRect(x: 70, y: 0, width: 150, height: 100))
+        let imagen: UIImageView = UIImageView(frame: CGRect(x: -100, y: 0, width: 100, height: 150))
+        let nombreItem: UILabel = UILabel(frame: CGRect(x: 30, y: -20, width: 150, height: 100))
+        let tipoItem: UILabel = UILabel(frame: CGRect(x: 30, y: 0, width: 150, height: 100))
+        let ataqueItem: UILabel = UILabel(frame: CGRect(x: 30, y: 20, width: 150, height: 100))
+        let defensaItem: UILabel = UILabel(frame: CGRect(x: 30, y: 40, width: 150, height: 100))
+        let magiaItem: UILabel = UILabel(frame: CGRect(x: 30, y: 60, width: 150, height: 100))
+        let suerteItem: UILabel = UILabel(frame: CGRect(x: 30, y: 80, width: 150, height: 100))
         
         imagen.image = heroina.inventario[row].imagen!
-        texto.text = heroina.inventario[row].nombre
+        nombreItem.text = "Nombre : \(heroina.inventario[row].nombre)"
+        tipoItem.text = "Tipo : \(heroina.inventario[row].tipo)"
+        ataqueItem.text = "Ataque : \(heroina.inventario[row].ataque)"
+        defensaItem.text = "Defensa : \(heroina.inventario[row].defensa)"
+        magiaItem.text = "Magia : \(heroina.inventario[row].magia)"
+        suerteItem.text = "Suerte : \(heroina.inventario[row].suerte)"
+        
         
         vista.addSubview(imagen)
-        vista.addSubview(texto)
+        vista.addSubview(nombreItem)
+        vista.addSubview(tipoItem)
+        vista.addSubview(ataqueItem)
+        vista.addSubview(defensaItem)
+        vista.addSubview(magiaItem)
+        vista.addSubview(suerteItem)
+        
+        
         
         return vista
     }
@@ -55,7 +73,7 @@ class Inventario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //Heroina auxiliar con los mismos datos que la heroina actual
-        var hAux:Heroe = heroina
+        let hAux:Heroe = heroina
         //Susitituimos el item actual por el de la equipación
         switch(heroina.inventario[row].tipo){
             case "arma":

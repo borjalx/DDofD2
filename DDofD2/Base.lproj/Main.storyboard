@@ -426,6 +426,7 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wh3-XE-ldg">
                                 <rect key="frame" x="0.0" y="304" width="375" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83767810880829019" green="0.83767810880829019" blue="0.83767810880829019" alpha="0.4197843309859155" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXd-HD-1Hn">
                                 <rect key="frame" x="16" y="234" width="343" height="37"/>
@@ -464,12 +465,12 @@
     <resources>
         <image name="arquera" width="52" height="67"/>
         <image name="back_heroe" width="221" height="80"/>
-        <image name="damage" width="56" height="57"/>
-        <image name="defensa" width="56" height="57"/>
+        <image name="damage" width="42" height="42.75"/>
+        <image name="defensa" width="42" height="42.75"/>
         <image name="guerrera" width="62" height="65"/>
-        <image name="lucky" width="56" height="57"/>
+        <image name="lucky" width="42" height="42.75"/>
         <image name="maga" width="51" height="65"/>
-        <image name="magic" width="56" height="57"/>
+        <image name="magic" width="42" height="42.75"/>
         <image name="upgrade" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
