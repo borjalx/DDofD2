@@ -109,7 +109,7 @@ class ViewController: UIViewController {
                 break
         }
         heroina.equipacion = equipacion
-        heroina.inventario = [daga,arcoPlastico,cetroMadera,armaduraB,cascoB,botasB,escudoB]
+        //heroina.inventario = [daga,arcoPlastico,cetroMadera,armaduraB,cascoB,botasB,escudoB]
         print("Heroina nombre = \(heroina.nombre)")
     }
 }

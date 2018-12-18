@@ -474,8 +474,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83767810880000004" green="0.83767810880000004" blue="0.83767810880000004" alpha="0.41978433100000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkb-xa-WGv">
-                                <rect key="frame" x="34" y="46" width="47" height="46"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="kkb-xa-WGv">
+                                <rect key="frame" x="28" y="167" width="63" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-Yi-b6L">
@@ -491,7 +491,7 @@
                                 <state key="normal" title="Volver"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGd-Ho-drn">
-                                <rect key="frame" x="104" y="59" width="42" height="21"/>
+                                <rect key="frame" x="99" y="184" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -501,6 +501,9 @@
                         <color key="backgroundColor" red="0.69741742227979275" green="0.44654498119763475" blue="0.23746729597682667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Rj8-9J-HbJ"/>
                     </view>
+                    <connections>
+                        <outlet property="lblDinero" destination="NGd-Ho-drn" id="syc-fh-6yA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwy-wE-Pgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,6 +519,7 @@
         <image name="lucky" width="42" height="42.75"/>
         <image name="maga" width="51" height="65"/>
         <image name="magic" width="42" height="42.75"/>
+        <image name="money" width="42" height="42.75"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VPd-If-hds"/>

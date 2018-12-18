@@ -4,7 +4,7 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     //Objetos
     @IBOutlet weak var ahImagen: UIImageView!
-    @IBOutlet weak var ahAtaque: UILabel!
+    @IBOutlet weak var lblDinero: UILabel!
     @IBOutlet weak var ahMagia: UILabel!
     @IBOutlet weak var ahDefensa: UILabel!
     @IBOutlet weak var ahSuerte: UILabel!
@@ -13,8 +13,21 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
     //Auxiliares
-    var itemActual: Item = Item()
-    var diccInventario: [String: Item] = [:]
+    //var itemActual: Item = Item()
+    //var diccInventario: [String: Item] = [:]
+    
+    //Armas
+    var espada2:Item
+    var cetro2:Item
+    var arco2:Item
+    //Armaduras
+    var armadura2:Item
+    //Botas
+    var botas2:Item
+    //Cascos
+    var casco2:Item
+    //Escudos
+    var escudo2:Item
     
     
     override func viewDidLoad() {
@@ -81,7 +94,7 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             
         }
         //Mostramos en los labels los valores de la heroina auxiliar
-        
+        /*
         ahAtaque.text = String(hAux.ataque)
         ahAtaque.textColor = getColor(numeroActual: heroina.ataque, numeroNuevo: hAux.ataque)
         ahDefensa.text = String(hAux.defensa)
@@ -90,7 +103,7 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         ahMagia.textColor = getColor(numeroActual: heroina.magia, numeroNuevo: hAux.magia)
         ahSuerte.text = String(hAux.suerte)
         ahSuerte.textColor = getColor(numeroActual: heroina.suerte, numeroNuevo: hAux.suerte)
-        
+        */
     }
 
     //Funciones
@@ -116,16 +129,10 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     //Función que carga los valors de los objetos iniciales
     func cargaInicial(){
+
+        lblDinero.text = String(heroina.dinero)
         
-        //Diccionario de inventario del usuario
-        diccInventario = [
-            "arma":heroina.equipacion?.arma ?? Item(),
-            "armadura":heroina.equipacion?.armadura ?? Item(),
-            "botas":heroina.equipacion?.botas ?? Item(),
-            "casco":heroina.equipacion?.casco ?? Item(),
-            "escudo":heroina.equipacion?.escudo ?? Item()
-        ]
-        
+        /*
         ahImagen.image = heroina.imagen
         ahAtaque.text = String(heroina.ataqueReal())
         ahDefensa.text = String(heroina.defensaReal())
@@ -136,6 +143,7 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             lblMensajes.textColor = UIColor.red
             lblMensajes.text = "NO tienes items, ve a la tienda!"
         }
+         */
         
     }
     
