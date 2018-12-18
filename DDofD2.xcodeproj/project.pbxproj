@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2400A4B621C66D4000767B08 /* Inventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2400A4B521C66D4000767B08 /* Inventario.swift */; };
 		2407622B21BEC9CB0044016F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407622A21BEC9CB0044016F /* Menu.swift */; };
-		2407622D21BECCFA0044016F /* Inventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407622C21BECCFA0044016F /* Inventario.swift */; };
+		2407622D21BECCFA0044016F /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407622C21BECCFA0044016F /* Tienda.swift */; };
 		2446B06321B9A63B00B9D0A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446B06221B9A63B00B9D0A7 /* AppDelegate.swift */; };
 		2446B06521B9A63B00B9D0A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446B06421B9A63B00B9D0A7 /* ViewController.swift */; };
 		2446B06821B9A63B00B9D0A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2446B06621B9A63B00B9D0A7 /* Main.storyboard */; };
@@ -40,8 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2400A4B521C66D4000767B08 /* Inventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventario.swift; sourceTree = "<group>"; };
 		2407622A21BEC9CB0044016F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
-		2407622C21BECCFA0044016F /* Inventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventario.swift; sourceTree = "<group>"; };
+		2407622C21BECCFA0044016F /* Tienda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
 		2446B05F21B9A63B00B9D0A7 /* DDofD2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDofD2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2446B06221B9A63B00B9D0A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2446B06421B9A63B00B9D0A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				2407622A21BEC9CB0044016F /* Menu.swift */,
-				2407622C21BECCFA0044016F /* Inventario.swift */,
+				2407622C21BECCFA0044016F /* Tienda.swift */,
+				2400A4B521C66D4000767B08 /* Inventario.swift */,
 				2446B06221B9A63B00B9D0A7 /* AppDelegate.swift */,
 				2446B06421B9A63B00B9D0A7 /* ViewController.swift */,
 				2446B06621B9A63B00B9D0A7 /* Main.storyboard */,
@@ -276,8 +279,9 @@
 			files = (
 				2446B09921BADD9C00B9D0A7 /* Monstruo.swift in Sources */,
 				2446B09721BABE8400B9D0A7 /* Item.swift in Sources */,
-				2407622D21BECCFA0044016F /* Inventario.swift in Sources */,
+				2407622D21BECCFA0044016F /* Tienda.swift in Sources */,
 				2407622B21BEC9CB0044016F /* Menu.swift in Sources */,
+				2400A4B621C66D4000767B08 /* Inventario.swift in Sources */,
 				2446B06521B9A63B00B9D0A7 /* ViewController.swift in Sources */,
 				2446B09521BABD8800B9D0A7 /* Equipacion.swift in Sources */,
 				2446B06321B9A63B00B9D0A7 /* AppDelegate.swift in Sources */,
