@@ -273,6 +273,9 @@
                                 <rect key="frame" x="132" y="504" width="111" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Batalla"/>
+                                <connections>
+                                    <segue destination="1uL-eC-dob" kind="show" id="Ajc-Rp-bnS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H42-Ko-upG">
                                 <rect key="frame" x="43" y="64" width="289" height="128"/>
@@ -531,6 +534,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwy-wE-Pgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="897.30134932533736"/>
+        </scene>
+        <!--Pre Batalla-->
+        <scene sceneID="V6z-8t-xHi">
+            <objects>
+                <viewController id="1uL-eC-dob" customClass="PreBatalla" customModule="DDofD2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNa-NE-b9k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.62158946700507611" green="0.090192724053610646" blue="0.0033166502891319935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="eyk-19-XkN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPY-1t-IyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
