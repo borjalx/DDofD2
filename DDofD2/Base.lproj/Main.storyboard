@@ -475,11 +475,11 @@
                                 <color key="backgroundColor" red="0.83767810880000004" green="0.83767810880000004" blue="0.83767810880000004" alpha="0.41978433100000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money" translatesAutoresizingMaskIntoConstraints="NO" id="kkb-xa-WGv">
-                                <rect key="frame" x="28" y="167" width="63" height="54"/>
+                                <rect key="frame" x="28" y="147" width="63" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-Yi-b6L">
-                                <rect key="frame" x="16" y="209" width="343" height="37"/>
+                                <rect key="frame" x="16" y="211" width="343" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -489,20 +489,43 @@
                                 <rect key="frame" x="141" y="571" width="92" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Volver"/>
+                                <connections>
+                                    <segue destination="ggh-cd-rcj" kind="show" id="Ccw-nM-y6g"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGd-Ho-drn">
-                                <rect key="frame" x="99" y="184" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dinero actual :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGd-Ho-drn">
+                                <rect key="frame" x="99" y="164" width="111" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUW-B7-0ln">
+                                <rect key="frame" x="218" y="164" width="98" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.99225149278393621" blue="0.0013628899586823895" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVy-lg-pMz">
+                                <rect key="frame" x="53" y="533" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Comprar"/>
+                                <connections>
+                                    <action selector="adquirirItem:" destination="s0Z-qn-6Oc" eventType="touchUpInside" id="riJ-QN-ZNT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69741742227979275" green="0.44654498119763475" blue="0.23746729597682667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Rj8-9J-HbJ"/>
                     </view>
                     <connections>
-                        <outlet property="lblDinero" destination="NGd-Ho-drn" id="syc-fh-6yA"/>
+                        <outlet property="btnComprar" destination="FVy-lg-pMz" id="og9-xp-UNy"/>
+                        <outlet property="itemsPV" destination="Ptf-0W-TQs" id="tND-Bo-I4b"/>
+                        <outlet property="lblDinero" destination="SUW-B7-0ln" id="3E7-uG-bul"/>
+                        <outlet property="lblMensajes" destination="R6M-Yi-b6L" id="Ajo-zZ-d3A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwy-wE-Pgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -522,7 +545,7 @@
         <image name="money" width="42" height="42.75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VPd-If-hds"/>
-        <segue reference="J9t-sl-b89"/>
+        <segue reference="nCA-lx-Pcy"/>
+        <segue reference="Ccw-nM-y6g"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -38,17 +38,17 @@ class Inventario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let vista: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        let imagen: UIImageView = UIImageView(frame: CGRect(x: -100, y: 0, width: 100, height: 150))
-        let nombreItem: UILabel = UILabel(frame: CGRect(x: 30, y: -20, width: 150, height: 100))
-        let tipoItem: UILabel = UILabel(frame: CGRect(x: 30, y: 0, width: 150, height: 100))
-        let ataqueItem: UILabel = UILabel(frame: CGRect(x: 30, y: 20, width: 150, height: 100))
-        let defensaItem: UILabel = UILabel(frame: CGRect(x: 30, y: 40, width: 150, height: 100))
-        let magiaItem: UILabel = UILabel(frame: CGRect(x: 30, y: 60, width: 150, height: 100))
-        let suerteItem: UILabel = UILabel(frame: CGRect(x: 30, y: 80, width: 150, height: 100))
+        let imagen: UIImageView = UIImageView(frame: CGRect(x: -120, y: 0, width: 100, height: 150))
+        let nombreItem: UILabel = UILabel(frame: CGRect(x: 10, y: -20, width: 150, height: 100))
+        let tipoItem: UILabel = UILabel(frame: CGRect(x: 10, y: 0, width: 150, height: 100))
+        let ataqueItem: UILabel = UILabel(frame: CGRect(x: 10, y: 20, width: 150, height: 100))
+        let defensaItem: UILabel = UILabel(frame: CGRect(x: 10, y: 40, width: 150, height: 100))
+        let magiaItem: UILabel = UILabel(frame: CGRect(x: 10, y: 60, width: 150, height: 100))
+        let suerteItem: UILabel = UILabel(frame: CGRect(x: 10, y: 80, width: 150, height: 100))
         
         
         
-        imagen.image = heroina.inventario[row].imagen!
+        imagen.image = arrayItems[row].imagen!
         nombreItem.text = "Nombre : \(arrayItems[row].nombre)"
         tipoItem.text = "Tipo : \(arrayItems[row].tipo)"
         ataqueItem.text = "Ataque : \(arrayItems[row].ataque)"
@@ -147,10 +147,12 @@ class Inventario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         ahMagia.text = String(heroina.magiaReal())
         ahSuerte.text = String(heroina.suerteReal())
         
+        /*
         if heroina.inventario.isEmpty {
             lblMensajes.textColor = UIColor.red
             lblMensajes.text = "NO tienes items, ve a la tienda!"
         }
+         */
         
     }
     
