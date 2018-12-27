@@ -21,6 +21,7 @@
 		2446B09521BABD8800B9D0A7 /* Equipacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446B09421BABD8800B9D0A7 /* Equipacion.swift */; };
 		2446B09721BABE8400B9D0A7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446B09621BABE8400B9D0A7 /* Item.swift */; };
 		2446B09921BADD9C00B9D0A7 /* Monstruo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2446B09821BADD9C00B9D0A7 /* Monstruo.swift */; };
+		24906C9521D52A0B000A6946 /* Batalla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24906C9421D52A0B000A6946 /* Batalla.swift */; };
 		24FEDBAB21CAA41100CB40AB /* PreBatalla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FEDBAA21CAA41100CB40AB /* PreBatalla.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		2446B09421BABD8800B9D0A7 /* Equipacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipacion.swift; sourceTree = "<group>"; };
 		2446B09621BABE8400B9D0A7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2446B09821BADD9C00B9D0A7 /* Monstruo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monstruo.swift; sourceTree = "<group>"; };
+		24906C9421D52A0B000A6946 /* Batalla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Batalla.swift; sourceTree = "<group>"; };
 		24FEDBAA21CAA41100CB40AB /* PreBatalla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBatalla.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 				2446B06421B9A63B00B9D0A7 /* ViewController.swift */,
 				2446B06621B9A63B00B9D0A7 /* Main.storyboard */,
 				2446B06921B9A63E00B9D0A7 /* Assets.xcassets */,
+				24906C9421D52A0B000A6946 /* Batalla.swift */,
 				2446B06B21B9A63E00B9D0A7 /* LaunchScreen.storyboard */,
 				2446B06E21B9A63E00B9D0A7 /* Info.plist */,
 				2446B09221BABA0100B9D0A7 /* Heroe.swift */,
@@ -289,6 +292,7 @@
 				2446B06521B9A63B00B9D0A7 /* ViewController.swift in Sources */,
 				2446B09521BABD8800B9D0A7 /* Equipacion.swift in Sources */,
 				2446B06321B9A63B00B9D0A7 /* AppDelegate.swift in Sources */,
+				24906C9521D52A0B000A6946 /* Batalla.swift in Sources */,
 				2446B09321BABA0100B9D0A7 /* Heroe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
