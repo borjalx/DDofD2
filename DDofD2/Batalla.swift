@@ -20,7 +20,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var lblVidaH: UILabel!
     @IBOutlet weak var pvh: UIPickerView!
 
-    var nDados = 0
+    var nDadosH = 0
     
     //Enemigo
     @IBOutlet weak var imgEnemigo: UIImageView!
@@ -29,14 +29,14 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var lblVidaE: UILabel!
     @IBOutlet weak var pve: UIPickerView!
     
-    //var nDadosE = 0
+    var nDadosE = 0
     
     @IBOutlet weak var btnAtacar: UIButton!
     
     //Dados
     //Array Dados
-    var dadosE:[UIImage] = Array()
-    var dadosH:[UIImage] = Array()
+    //var dadosE:[UIImage] = Array()
+    //var dadosH:[UIImage] = Array()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,6 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         imgHeroina.image = heroina.imagen
         imgEnemigo.image = enemigoActual.imagen
         actualizarInfo()
-        addDadosArray()
     }
     
     func actualizarInfo() {
@@ -69,103 +68,76 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         lblVidaE.text = String(enemigoActual.vida)
     }
     
-    //Función para añadir los dados a los arrays
-    func addDadosArray(){
-        var i = 1
-        repeat{
-            var nombreH = "dice"+String(i)
-            var imgH = UIImage(named: nombreH)
-            
-            dadosH.append(UIImage(named: "dice1")!)
-            
-            var nombreE = "dice"+String(i)+"U"
-            var imgE = UIImage(named: nombreE)
-            //dadosE.append(imgE!)
-            dadosH.append(UIImage(named: "dice1")!)
-            
-            i=i+1
-        }while i < 13
-    }
-    
     //PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        /*if(heroina.ataqueReal() >= 100){
-            return 3
-        }else if(heroina.ataqueReal() >= 10){
-            return 2
+        if(pickerView == pvh){
+            if(heroina.ataqueReal() >= 199){
+                nDadosH = 3
+                print("ndadosh =" + String(nDadosH))
+                return 3
+            }else if(heroina.ataqueReal() >= 99){
+                nDadosH = 2
+                print("ndadosh =" + String(nDadosH))
+                return 2
+            }else{
+                nDadosH = 1
+                print("ndadosh =" + String(nDadosH))
+                return 1
+            }
+            
         }else{
-            return 1
-        }*/
-        //if(pickerView.tag == 1){
-            if(heroina.ataque >= 200){
-                nDados = 3
+            if(enemigoActual.ataque > 199){
+                nDadosE = 3
+                print("ndadose =" + String(nDadosE))
                 return 3
-            }else if(heroina.ataque >= 100){
-                nDados = 2
+            }else if(enemigoActual.ataque > 99){
+                nDadosE = 2
+                print("ndadose =" + String(nDadosE))
                 return 2
             }else{
-                nDados = 1
+                nDadosE = 1
+                print("ndadose =" + String(nDadosE))
                 return 1
             }
-        /*}else{
-            if(enemigoActual.ataque >= 200){
-                nDadosE = 3
-                return 3
-            }else if(enemigoActual.ataque >= 100){
-                nDadosE = 3
-                return 2
-            }else{
-                nDadosE = 3
-                return 1
-            }
-        }*/
+            
+        }
+        
+        
     }
     
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch component {
-        case 1:
-            return dadosE.count
-        case 2:
-            return dadosH.count
-        default:
-            return 12
-        }
+        return 12
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        let vista: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        let imagen: UIImageView = UIImageView(frame: CGRect(x: -100, y: 0, width: 100, height: 150))
+        let vista: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
+        let imagen: UIImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 90, height: 90))
         
-        switch component {
-        case 1:
-            imagen.image = dadosE[row]
-            vista.addSubview(imagen)
-            
-            return vista
-        case 2:
-            imagen.image = dadosH[row]
-            vista.addSubview(imagen)
-            
-            return vista
-        default:
-            return vista
+        var nombreImagen = "dice"+String(row+1)
+        
+        if(pickerView == pve){
+            nombreImagen = "dice"+String(row+1)+"U"
         }
         
+        imagen.image = UIImage(named: nombreImagen)
+        vista.addSubview(imagen)
+            
+        return vista
         
         
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 150
+        return 120
     }
     
     @IBAction func atacar(_ sender: Any) {
         var resDadosEnemigo = 0
         var resDadosHeroina = 0
         //Obtenemos posiciones random de los dados de la heroina
-        for i in 1...nDados{
+        for i in 1...nDadosH{
             //Obtenemos el número random del dado nºi
             let nRandomH = Int.random(in: 0 ... 12)
             //Movemos el pv de los dados
@@ -176,7 +148,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }
         
         //Obtenemos posiciones random de los dados del enemigo
-        for i in 1...nDados{
+        for i in 1...nDadosE{
             //Obtenemos el número random del dado nºi
             let nRandomE = Int.random(in: 0 ... 12)
             //Movemos el pv de los dados
