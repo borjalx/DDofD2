@@ -627,41 +627,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqm-du-6ia">
-                                <rect key="frame" x="0.0" y="194" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="220" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IYu-0d-vYC">
-                                <rect key="frame" x="45" y="71" width="79" height="95"/>
+                                <rect key="frame" x="45" y="117" width="79" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="damage" translatesAutoresizingMaskIntoConstraints="NO" id="ALw-38-4ax">
-                                <rect key="frame" x="132" y="72" width="40" height="40"/>
+                                <rect key="frame" x="132" y="118" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defensa" translatesAutoresizingMaskIntoConstraints="NO" id="iCT-eK-aF8">
-                                <rect key="frame" x="132" y="120" width="40" height="40"/>
+                                <rect key="frame" x="132" y="166" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bH-Ey-Rjq">
-                                <rect key="frame" x="180" y="81" width="42" height="21"/>
+                                <rect key="frame" x="180" y="127" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4P-tN-B0t">
-                                <rect key="frame" x="180" y="130" width="42" height="21"/>
+                                <rect key="frame" x="180" y="176" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2I9-e7-eee">
-                                <rect key="frame" x="0.0" y="344" width="375" height="150"/>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2I9-e7-eee">
+                                <rect key="frame" x="0.0" y="369" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="690-SL-P2Y">
-                                <rect key="frame" x="242" y="98" width="40" height="40"/>
+                                <rect key="frame" x="242" y="144" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="7xF-HP-AoR">
@@ -669,17 +669,38 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCJ-iF-8LE">
-                                <rect key="frame" x="284" y="108" width="75" height="21"/>
+                                <rect key="frame" x="284" y="154" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESk-ak-t5A">
+                                <rect key="frame" x="34" y="46" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Volver"/>
+                                <connections>
+                                    <segue destination="1uL-eC-dob" kind="show" id="fu2-6t-ifo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRB-z1-7hZ">
+                                <rect key="frame" x="184" y="45" width="74" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ATACAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.54400097150000004" green="0.17903830500000001" blue="0.0" alpha="0.57746478869999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="atacar:" destination="sUJ-1Y-lGu" eventType="touchUpInside" id="w2R-rn-jTw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27847668779166668" green="0.012952404083333348" blue="0.54400097150000004" alpha="0.57746478869999995" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3ZT-eY-MJG"/>
                     </view>
                     <connections>
+                        <outlet property="btnAtacar" destination="mRB-z1-7hZ" id="h8P-FE-hJc"/>
                         <outlet property="imgEnemigo" destination="IYu-0d-vYC" id="0be-rQ-Bt5"/>
                         <outlet property="imgHeroina" destination="qWS-AO-6ix" id="Ubw-SJ-Zjw"/>
                         <outlet property="lblAtaqueE" destination="8bH-Ey-Rjq" id="Jzb-yy-5vl"/>
@@ -688,6 +709,8 @@
                         <outlet property="lblDefensaH" destination="dOK-4H-A3B" id="PQe-iZ-yDF"/>
                         <outlet property="lblVidaE" destination="PCJ-iF-8LE" id="Kuf-wH-MgU"/>
                         <outlet property="lblVidaH" destination="BYW-1j-Lss" id="hn0-if-7fv"/>
+                        <outlet property="pve" destination="2I9-e7-eee" id="EI5-Wh-1jc"/>
+                        <outlet property="pvh" destination="Qqm-du-6ia" id="xus-v8-1sN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5MX-al-Xcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -708,6 +731,8 @@
         <image name="money" width="56" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Gw9-Zs-gfp"/>
+        <segue reference="fu2-6t-ifo"/>
         <segue reference="PH2-lA-wmm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-var enemigoActual = Monstruo()
+var enemigo = Monstruo()
 
 class PreBatalla: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
@@ -92,8 +92,8 @@ class PreBatalla: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        enemigoActual = monstruos[row]
-        btnEscoger.setTitle("Luchar contra \(enemigoActual.nombre)", for: .normal)
+        enemigo = monstruos[row]
+        btnEscoger.setTitle("Luchar contra \(enemigo.nombre)", for: .normal)
     }
     
 
