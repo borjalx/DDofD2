@@ -19,7 +19,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var lblDefensaH: UILabel!
     @IBOutlet weak var lblVidaH: UILabel!
     @IBOutlet weak var pvh: UIPickerView!
-
+    let mediaH = (Double(heroina.magiaReal())*0.3) + (Double(heroina.suerteReal())*0.3) + (Double(heroina.ataqueReal())*0.6)
     var nDadosH = 0
     
     //Enemigo
@@ -70,8 +70,9 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     //PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
         if(pickerView == pvh){
-            if(heroina.ataqueReal() >= 199){
+            if(mediaH >= 199){
                 nDadosH = 3
                 print("ndadosh =" + String(nDadosH))
                 return 3
@@ -137,18 +138,22 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         var resDadosEnemigo = 0
         var resDadosHeroina = 0
         //Obtenemos posiciones random de los dados de la heroina
-        for i in 1...nDadosH{
+        
+        for i in 0...nDadosH-1{
+            print("Damos dados heroe")
             //Obtenemos el número random del dado nºi
-            let nRandomH = Int.random(in: 0 ... 12)
-            //Movemos el pv de los dados
-            pve.selectRow(nRandomH, inComponent: i, animated: true)
-            //Añadimos al resultado de los dados el resultado del dado nºi
-            resDadosHeroina += nRandomH
+            let nRandomH = Int.random(in: 0 ... 11)
             print("nRandomH = " + String(nRandomH))
+            //Movemos el pv de los dados
+            pvh.selectRow(nRandomH, inComponent: i, animated: true)
+            //Añadimos al resultado de los dados el resultado del dado nºi
+            print("i = " + String(i))
+            resDadosHeroina += nRandomH+1
+            print("resDadosHeroina = " + String(resDadosHeroina))
         }
         
         //Obtenemos posiciones random de los dados del enemigo
-        for i in 1...nDadosE{
+        for i in 0...nDadosE-1{
             //Obtenemos el número random del dado nºi
             let nRandomE = Int.random(in: 0 ... 12)
             //Movemos el pv de los dados
@@ -159,10 +164,11 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }
         
         //Ataque de la heroina
-        let ataqueH = resDadosHeroina
+        print("mediah = " + String(mediaH))
+        let ataqueH = Int((Double(resDadosHeroina) * mediaH)/30)
         print("ataqueH = " + String(ataqueH))
         //Ataque del enemigo
-        let ataqueE = resDadosEnemigo
+        let ataqueE = Int((Double(resDadosEnemigo) * Double(enemigo.ataque))/3)
         print("ataqueE = " + String(ataqueE))
         
         //Si el ataque de la heroina es mayor a la defensa del enemigo
@@ -184,7 +190,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         //Si el ataque del enemigo es mayor a la defensa de la heroina
         if(ataqueE > heroina.defensa){
             //Cantidad de vida que se le quitará a la heroina
-            var resAtaqueE = ataqueE - heroina.defensa
+            let resAtaqueE = ataqueE - heroina.defensaReal()
             if((heroina.vida - resAtaqueE) <= 0){
                 heroina.vida = 0
             }else{
