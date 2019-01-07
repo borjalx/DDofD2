@@ -32,7 +32,10 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     var nDadosE = 0
     
     @IBOutlet weak var btnAtacar: UIButton!
+    @IBOutlet weak var btnVolver: UIButton!
+    @IBOutlet weak var btnLose: UIButton!
     
+    @IBOutlet weak var lblMensajes: UILabel!
     //Dados
     //Array Dados
     //var dadosE:[UIImage] = Array()
@@ -45,7 +48,10 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         pvh.delegate = self
         
         pve.dataSource = self
-        pve.dataSource = self
+        pvh.dataSource = self
+        
+        pve.isUserInteractionEnabled = false
+        pvh.isUserInteractionEnabled = false
         
         cargaInicial()
         // Do any additional setup after loading the view.
@@ -55,6 +61,8 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     func cargaInicial(){
         imgHeroina.image = heroina.imagen
         imgEnemigo.image = enemigoActual.imagen
+        lblMensajes.text = ""
+        btnLose.isHidden = true
         actualizarInfo()
     }
     
@@ -165,10 +173,10 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         
         //Ataque de la heroina
         print("mediah = " + String(mediaH))
-        let ataqueH = Int((Double(resDadosHeroina) * mediaH)/30)
+        let ataqueH = Int((Double(resDadosHeroina) * mediaH)/20)
         print("ataqueH = " + String(ataqueH))
         //Ataque del enemigo
-        let ataqueE = Int((Double(resDadosEnemigo) * Double(enemigo.ataque))/3)
+        let ataqueE = Int((Double(resDadosEnemigo) * Double(enemigo.ataque))/2)
         print("ataqueE = " + String(ataqueE))
         
         //Si el ataque de la heroina es mayor a la defensa del enemigo
@@ -188,7 +196,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }
         
         //Si el ataque del enemigo es mayor a la defensa de la heroina
-        if(ataqueE > heroina.defensa){
+        if(ataqueE > heroina.defensaReal()){
             //Cantidad de vida que se le quitará a la heroina
             let resAtaqueE = ataqueE - heroina.defensaReal()
             if((heroina.vida - resAtaqueE) <= 0){
@@ -204,7 +212,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }
         
         //Comprobamos si alguno ya no tiene vida
-        if(heroina.vida <= 0 || enemigo.vida <= 0){
+        //if(heroina.vida <= 0 || enemigo.vida <= 0){
             //Si el enemigo no tiene vida pero la heroina si (gana heroina)
             if(enemigo.vida <= 0 && heroina.vida > 0){
                 //se le dan las monedas correspondientes y la experiencia
@@ -214,27 +222,35 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
                 heroina.vida = 100
                 //Se esconde el botón de atacar
                 btnAtacar.isHidden = true
+                lblMensajes.text = "Has Ganada. +" + String(enemigo.recompensa) + " monedas"
                 //Se le muestra un botón para volver a la pantalla de escoger enemigo con un mensaje avisando que ha derrotado al enemigo y lo que ha ganado
                 //btnVictory.isHidden = false
                 
                 //Si ninguno tiene vida (empate)
-            }else if(heroina.vida <= 0 && enemigo.vida <= 0){
+            //}else if(heroina.vida <= 0 && enemigo.vida <= 0){
                 //Se le muestra el botón para volver a escoger heroina
                 //btnLose.isHidden = true
                 //Si la heroina no tiene vida pero el enemigo si (gana enemigo)
-            }else if(heroina.vida <= 0 && enemigo.vida > 0){
+                //Escondemos el botón de atacar
+                //btnAtacar.isHidden = true
+            }
+            if heroina.vida <= 0{
                 //Se vuelve a la pantalla para escoger heroina
-                
-                //btnLose.isHidden = true
+                //Escondemos el botón de atacar
+                btnAtacar.isHidden = true
+                btnVolver.isHidden = true
+                lblMensajes.text = "Has perdido. Vuelve a intentarlo"
+                btnLose.isHidden = false
                 //Se le reinician los valores iniciales al enemigo¿? - No hace falta ya que obtenemos una copia del enemigo
             }
             
-            //Escondemos el botón de atacar
-            btnAtacar.isHidden = true
-        }
+        
+        //}
         //En caso de haber alguno sin vida se acaba la batalla
         
         //Se actualizan los valores de los labels para informar al usuario del estado actual de la batalla
-        actualizarInfo()    }
+        actualizarInfo()
+        
+    }
     
 }

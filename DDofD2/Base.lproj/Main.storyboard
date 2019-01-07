@@ -695,18 +695,36 @@
                                     <action selector="atacar:" destination="sUJ-1Y-lGu" eventType="touchUpInside" id="w2R-rn-jTw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-WO-8D8">
+                                <rect key="frame" x="94" y="77" width="254" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wD-zg-KYC">
+                                <rect key="frame" x="80" y="45" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reintentar"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="K3h-j4-1JO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27847668779166668" green="0.012952404083333348" blue="0.54400097150000004" alpha="0.57746478869999995" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3ZT-eY-MJG"/>
                     </view>
                     <connections>
                         <outlet property="btnAtacar" destination="mRB-z1-7hZ" id="h8P-FE-hJc"/>
+                        <outlet property="btnLose" destination="5wD-zg-KYC" id="pXT-C0-3dU"/>
+                        <outlet property="btnVolver" destination="ESk-ak-t5A" id="OAX-8C-KNc"/>
                         <outlet property="imgEnemigo" destination="IYu-0d-vYC" id="0be-rQ-Bt5"/>
                         <outlet property="imgHeroina" destination="qWS-AO-6ix" id="Ubw-SJ-Zjw"/>
                         <outlet property="lblAtaqueE" destination="8bH-Ey-Rjq" id="Jzb-yy-5vl"/>
                         <outlet property="lblAtaqueH" destination="tp9-Mk-qMT" id="Bbu-D7-KN3"/>
                         <outlet property="lblDefensaE" destination="I4P-tN-B0t" id="K9q-pi-qjD"/>
                         <outlet property="lblDefensaH" destination="dOK-4H-A3B" id="PQe-iZ-yDF"/>
+                        <outlet property="lblMensajes" destination="B4b-WO-8D8" id="hii-zQ-ekq"/>
                         <outlet property="lblVidaE" destination="PCJ-iF-8LE" id="Kuf-wH-MgU"/>
                         <outlet property="lblVidaH" destination="BYW-1j-Lss" id="hn0-if-7fv"/>
                         <outlet property="pve" destination="2I9-e7-eee" id="EI5-Wh-1jc"/>
@@ -731,7 +749,6 @@
         <image name="money" width="56" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gw9-Zs-gfp"/>
         <segue reference="fu2-6t-ifo"/>
         <segue reference="PH2-lA-wmm"/>
     </inferredMetricsTieBreakers>
