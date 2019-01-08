@@ -19,7 +19,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var lblDefensaH: UILabel!
     @IBOutlet weak var lblVidaH: UILabel!
     @IBOutlet weak var pvh: UIPickerView!
-    let mediaH = (Double(heroina.magiaReal())*0.3) + (Double(heroina.suerteReal())*0.3) + (Double(heroina.ataqueReal())*0.6)
+    let mediaH = (Double(heroina.magiaReal())*0.3) + (Double(heroina.suerteReal())*0.3) + (Double(heroina.ataqueReal())*0.4)
     var nDadosH = 0
     
     //Enemigo
@@ -163,7 +163,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         //Obtenemos posiciones random de los dados del enemigo
         for i in 0...nDadosE-1{
             //Obtenemos el número random del dado nºi
-            let nRandomE = Int.random(in: 0 ... 12)
+            let nRandomE = Int.random(in: 0 ... 11)
             //Movemos el pv de los dados
             pve.selectRow(nRandomE,inComponent: i,animated: true)
             //Añadimos al resultado de los dados el resultado del dado nºi
@@ -183,7 +183,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         if(ataqueH > enemigo.defensa){
             //Cantidad de vida que se le quitará al enemigo
             let resAtaqueH = ataqueH - enemigo.defensa
-            lblMensajes.text = "-" + String(resAtaqueH) + " de vida a Enemigo"
+            lblMensajes.text = "-\(resAtaqueH) de vida a Enemigo."
             if((enemigo.vida - resAtaqueH) <= 0){
                 enemigo.vida = 0
             }else{
@@ -193,14 +193,14 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             //En caso contrario
         }else{
             //No le quitamos vida
-            lblMensajes.text = "No quitamos vida a Enemigo"
+            lblMensajes.text = "No quitamos vida a Enemigo."
         }
         
         //Si el ataque del enemigo es mayor a la defensa de la heroina
         if(ataqueE > heroina.defensaReal()){
             //Cantidad de vida que se le quitará a la heroina
             let resAtaqueE = ataqueE - heroina.defensaReal()
-            lblMensajes.text = lblMensajes + "-" + String(resAtaqueE) + " de vida a Heroina"
+            lblMensajes.text = lblMensajes.text! + "-\(resAtaqueE) de vida a Heroina"
             if((heroina.vida - resAtaqueE) <= 0){
                 heroina.vida = 0
             }else{
@@ -210,7 +210,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             //en caso contrario
         }else{
             //No le quitamos vida
-            lblMensajes.text += "Enemigo no nos hiere"
+            lblMensajes.text = lblMensajes.text! + "Enemigo no nos hiere"
         }
         
         //Comprobamos si alguno ya no tiene vida
@@ -224,7 +224,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
                 heroina.vida = 100
                 //Se esconde el botón de atacar
                 btnAtacar.isHidden = true
-                lblMensajes.text = "Has Ganada. +" + String(enemigo.recompensa) + " monedas"
+                lblMensajes.text = "Has Ganado. +\(enemigo.recompensa) monedas"
                 //Se le muestra un botón para volver a la pantalla de escoger enemigo con un mensaje avisando que ha derrotado al enemigo y lo que ha ganado
                 //btnVictory.isHidden = false
                 

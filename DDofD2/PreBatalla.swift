@@ -46,7 +46,7 @@ class PreBatalla: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     func cargaInicial(){
         
          monstruos = [monstruo1, monstruo2, monstruo3, monstruo4, monstruo5]
-        
+        btnEscoger.isHidden = true
     }
     
     //PickerView
@@ -93,6 +93,7 @@ class PreBatalla: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         enemigo = monstruos[row]
+        btnEscoger.isHidden = false
         btnEscoger.setTitle("Luchar contra \(enemigo.nombre)", for: .normal)
     }
     
