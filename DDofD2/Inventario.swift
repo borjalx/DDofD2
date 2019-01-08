@@ -70,7 +70,11 @@ class Inventario: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 170
+        return 200
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return 500
     }
     /*
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

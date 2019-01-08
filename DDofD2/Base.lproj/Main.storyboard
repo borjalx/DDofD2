@@ -400,7 +400,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wh3-XE-ldg">
-                                <rect key="frame" x="0.0" y="345" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="322" width="375" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83767810880829019" green="0.83767810880829019" blue="0.83767810880829019" alpha="0.4197843309859155" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
@@ -514,7 +514,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-Yi-b6L">
                                 <rect key="frame" x="16" y="211" width="343" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.54709619768071072" green="0.33483905727661634" blue="0.29133290729251693" alpha="0.70261665239726023" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="0.23303724315068494" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -791,6 +791,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ajc-Rp-bnS"/>
-        <segue reference="43D-jh-xv3"/>
+        <segue reference="Ccw-nM-y6g"/>
     </inferredMetricsTieBreakers>
 </document>

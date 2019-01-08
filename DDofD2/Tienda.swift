@@ -89,6 +89,7 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        btnComprar.isHidden = false
         itemActual = productos[row]
         btnComprar.setTitle("Comprar \(itemActual.nombre)", for: .normal)
         //Heroina auxiliar con los mismos datos que la heroina actual
@@ -153,6 +154,7 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     func cargaInicial(){
 
         lblDinero.text = String(heroina.dinero)
+        btnComprar.isHidden = true
         
         productos.append(espada2)
         productos.append(cetro2)
@@ -206,7 +208,7 @@ class Tienda: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             default:
                 break;
             }
-            lblMensajes.text = "Ya tienes \(itemActual.nombre)!  -\(itemActual.precio) monedas"
+            lblMensajes.text = "Has adquirido \(itemActual.nombre)!  -\(itemActual.precio) monedas"
             lblMensajes.textColor = UIColor.green
         }else{
             let dineroNec = itemActual.precio - heroina.dinero
