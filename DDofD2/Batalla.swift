@@ -183,6 +183,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         if(ataqueH > enemigo.defensa){
             //Cantidad de vida que se le quitará al enemigo
             let resAtaqueH = ataqueH - enemigo.defensa
+            lblMensajes.text = "-" + String(resAtaqueH) + " de vida a Enemigo"
             if((enemigo.vida - resAtaqueH) <= 0){
                 enemigo.vida = 0
             }else{
@@ -192,13 +193,14 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             //En caso contrario
         }else{
             //No le quitamos vida
-            print("No quitamos vida a Enemigo")
+            lblMensajes.text = "No quitamos vida a Enemigo"
         }
         
         //Si el ataque del enemigo es mayor a la defensa de la heroina
         if(ataqueE > heroina.defensaReal()){
             //Cantidad de vida que se le quitará a la heroina
             let resAtaqueE = ataqueE - heroina.defensaReal()
+            lblMensajes.text = lblMensajes + "-" + String(resAtaqueE) + " de vida a Heroina"
             if((heroina.vida - resAtaqueE) <= 0){
                 heroina.vida = 0
             }else{
@@ -208,7 +210,7 @@ class Batalla: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             //en caso contrario
         }else{
             //No le quitamos vida
-            print("No quitamos vida a Heroina")
+            lblMensajes.text += "Enemigo no nos hiere"
         }
         
         //Comprobamos si alguno ya no tiene vida
